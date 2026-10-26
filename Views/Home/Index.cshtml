@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+    string labName="Управление IT проектами";
+}
+
+<div class="container my-5">
+    <div class="p-5 mb-4 bg-light rounded-3 border shadow-sm">
+        <div class="container-fluid py-3">
+            <h1 class="display-5 fw-bold text-primary mb-3">
+                Добро пожаловать в @labName
+            </h1>
+            <!-- Текстовое описание -->
+            <p class="col-md-8 fs-4 text-muted">
+                Наша компания предоставляет разные услуги: от установки ПО и настройки антивируса до просмотра кода и выяввления в нем ошибок!
+            </p>
+            
+            <!-- Razor: Динамический вывод текущей даты прямо в тексте -->
+            <p class="text-secondary small mb-4">
+                <i class="bi bi-calendar"></i> Сегодняшняя дата: @DateTime.Now.ToString("dd MMMM yyyy года")
+            </p>
+            
+            <!-- Кнопка Bootstrap с эффектом при наведении -->
+            <button class="btn btn-primary btn-lg px-4" type="button" onclick="toggleSecretText()">
+                Узнать больше
+            </button>
+            
+            <!-- Скрытый блок, который покажется при нажатии на кнопку -->
+            <div id="secretBlock" class="mt-4 p-3 bg-white border rounded d-none">
+                <h5 class="text-success">🎉 Поздравляем!</h5>
+                <p class="mb-0">Кнопка работает, а Bootstrap-сетка и Razor-код успешно скомпилировались.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function toggleSecretText() {
+            var element = document.getElementById("secretBlock");
+            if (element) {
+                element.classList.toggle("d-none");
+            }
+        }
+    </script>
+}

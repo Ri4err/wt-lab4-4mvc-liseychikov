@@ -1,0 +1,34 @@
+@model TaskModel
+
+<div class="container py-4" style="max-width: 600px;">
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body">
+            <h2 class="fw-bold mb-4">Детали задачи</h2>
+
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                    <strong>ID:</strong> @Model.Id
+                </li>
+                <li class="list-group-item">
+                    <strong>Название:</strong> @Model.Name
+                </li>
+                <li class="list-group-item">
+                    <strong>Категория:</strong> @Model.Category
+                </li>
+                <li class="list-group-item">
+                    <strong>Цена:</strong> @Model.Price руб.
+                </li>
+                <li class="list-group-item">
+                    <strong>Статус:</strong> 
+                    <span class="badge @(Model.IsAvaliable ? "bg-success" : "bg-danger")">
+                        @(Model.IsAvaliable ? "Доступна" : "Недоступна")
+                    </span>
+                </li>
+            </ul>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Назад к списку
+            </a>
+        </div>
+    </div>
+</div>
