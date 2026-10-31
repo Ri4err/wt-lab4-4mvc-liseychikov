@@ -1,12 +1,12 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM ://microsoft.com AS build
 WORKDIR /src
 COPY . .
 RUN dotnet restore
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM ://microsoft.com AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENV ASPNETCORE_URLS=http://0.0.0.0:10000
+ENV ASPNETCORE_URLS=http://0.0.0
 EXPOSE 10000
-ENTRYPOINT ["dotnet", "wt_lab4_4mvc_liseychikov.dll"]
+ENTRYPOINT ["dotnet", "wt-lab4-4mvc-liseychikov.dll"]

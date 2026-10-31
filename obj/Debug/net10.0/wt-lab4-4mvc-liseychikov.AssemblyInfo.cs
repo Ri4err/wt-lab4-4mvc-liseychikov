@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wt-lab4-4mvc-liseychikov")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1ad2588ca96c89c88b326a7b4489a946153b065")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85f2a8da3add615e538cdeca0efedee515edbeed")]
 [assembly: System.Reflection.AssemblyProductAttribute("wt-lab4-4mvc-liseychikov")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wt-lab4-4mvc-liseychikov")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
